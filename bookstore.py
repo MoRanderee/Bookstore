@@ -164,6 +164,10 @@ What would you like to change?
                 raise Exception("Incorrect option selected!")
         
         elif menu == '3':
+            """
+            This menu option allows the user to delete any book from the DB using the ID of the book.
+            The user is first provided with a list of all the books and their ID's.
+            """
             
             # Display all books in table
             cursor.execute('''SELECT * FROM books''')
