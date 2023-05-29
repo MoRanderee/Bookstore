@@ -98,17 +98,17 @@ Please select option below:
             
         elif menu == '1':
             '''
-            This option allows the user to enter add a new book to the table in the DB
+            This option allows the user to add a new book to the table in the DB
             '''
 
             # Request info of new books
-            name = input("Enter title of book:\n")
+            title = input("Enter title of book:\n")
             author = input("Enter author of book:\n")
             qty = int(input("Enter the stock quantity:\n"))
 
             # If i dont specify an ID value to insert, it will automatically increase the value of the ID for the next record
             cursor.execute('''INSERT INTO books(Title, Author, Qty) VALUES(?,?,?)''',
-                   (name, author, qty))
+                   (title, author, qty))
             
             # commit to add new data
             db.commit()
